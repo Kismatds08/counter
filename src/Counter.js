@@ -8,11 +8,12 @@ class Counter extends Component{
         };
     }
 
-    increment = () => {
+    count = () => {
         this.setState({
          count: this.state.count + 1
         })
     };
+    
     
     decrement = () => {
         this.setState({
@@ -20,9 +21,9 @@ class Counter extends Component{
         })
     };
 
-    multiply = () => {
+    clear = () => {
         this.setState({
-            count: this.state.count*2
+            count: this.state.count* 0
         })
     }
 
@@ -30,10 +31,10 @@ class Counter extends Component{
     render(){
         return(
             <div>
-            <p>This is the current count {this.state.count}</p>
-            <button onClick = {this.increment}> Increment</button>
-            <button onClick= {this.decrement}> Decrement</button>
-            <button onClick= {this.multiply}> Multiply </button>
+            <p>This is the current click count {this.state.count}</p>
+            <button onClick = {this.count}>+</button>
+            <button onClick= {this.decrement}>-</button>
+            <button onClick= {this.clear}> Clear </button>
             </div>
 
         )
